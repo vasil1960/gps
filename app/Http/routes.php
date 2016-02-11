@@ -11,15 +11,6 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-Route::get('/names/{rtype}', ['as' => 'names', 'uses' => 'NameController@names' ]);
-Route::get('/index', ['as' => 'index', 'uses' => 'NameController@index' ]);
-//Route::get('/names/fl', ['as' => 'flnames', 'uses' => 'NameController@allFlNames' ]);
-//Route::get('/names/ul', ['as' => 'ulnames', 'uses' => 'NameController@allUlNames' ]);
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes

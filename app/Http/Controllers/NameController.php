@@ -47,6 +47,5 @@ class NameController extends Controller
         } catch (Exception $e) {
             return response()->json(array('err' => 'Грешно въвеждане'));
         }
-
     }
 }
