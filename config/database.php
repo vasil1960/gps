@@ -55,10 +55,10 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
 <<<<<<< HEAD
-            'host'      => env('DB_HOST', '172.16.4.55'),
-            'database'  => env('DB_DATABASE', 'iagGPS'),
-            'username'  => env('DB_USERNAME', 'cotaivo'),
-            'password'  => env('DB_PASSWORD', 'taniami'),
+            'host'      => env('DB_HOST', ''),
+            'database'  => env('DB_DATABASE', ''),
+            'username'  => env('DB_USERNAME', ''),
+            'password'  => env('DB_PASSWORD', ''),
 =======
             'host'      => env('DB_HOST', '127.0.0.1'),
             'database'  => env('DB_DATABASE', 'gps'),
