@@ -19,7 +19,6 @@
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-<<<<<<< HEAD
                               Въвеждане на ново физическо или юридическо лице {{ $rtype }}
                           </header>
                           <div class="panel-body">
@@ -96,7 +95,6 @@
                                           </div>
                                       </div>
 
-=======
                               Въвеждане на ново физическо или юридическо лице
                           </header>
                           <div class="panel-body">
@@ -207,30 +205,21 @@
                                               <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
                                           </div>
                                       </div>
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
                                       <div class="form-group">
                                           <div class="col-lg-offset-2 col-lg-10">
                                               <button class="btn btn-primary" type="submit">Save</button>
                                               <button class="btn btn-default" type="button">Cancel</button>
                                           </div>
                                       </div>
-<<<<<<< HEAD
                                       <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}"  />
                                   </form>
                               </div>
-
-=======
                                   </form>
                               </div>
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
                           </div>
                       </section>
                   </div>
               </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
               <!-- page end-->
       <!--main content end-->
 @endsection

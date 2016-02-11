@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
-=======
-<html lang="en"> 
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

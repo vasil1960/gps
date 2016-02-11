@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
 use App\City;
 use Mockery\Exception;
 
@@ -16,10 +15,10 @@ class NameController extends Controller
     public function index($rtype)
     {
         $citys = City::orderBy('PolpulatedPlace')->get();
-        return view('gps.dashboard.index',compact('citys','rtype'));
+        return view('gps.dashboard.index', compact('citys', 'rtype'));
     }
-    
-    public  function blank()
+
+    public function blank()
     {
         return view('gps.dashboard.blank');
     }
@@ -45,22 +44,9 @@ class NameController extends Controller
             $name->remember_token = $request->_token;
             $name->save();
             return response()->json(array('sms' => 'Данните са въведени успешно'));
-        } catch (Exception $e){
+        } catch (Exception $e) {
             return response()->json(array('err' => 'Грешно въвеждане'));
         }
-=======
 
-class NameController extends Controller
-{
-    //Връща списък на физическите и юридическите лица
-    public function names($rtype) 
-    {
-        $names = Name::where('rtype',$rtype)->get();
-        return view('names.names', compact('names','rtype'));
-    }
-    public function index() 
-    {
-    	return view('gps.dashboard.index');
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
     }
 }

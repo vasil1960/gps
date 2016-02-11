@@ -14,13 +14,9 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-<<<<<<< HEAD
 
-
-=======
 Route::get('/names/{rtype}', ['as' => 'names', 'uses' => 'NameController@names' ]);
 Route::get('/index', ['as' => 'index', 'uses' => 'NameController@index' ]);
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
 //Route::get('/names/fl', ['as' => 'flnames', 'uses' => 'NameController@allFlNames' ]);
 //Route::get('/names/ul', ['as' => 'ulnames', 'uses' => 'NameController@allUlNames' ]);
 
@@ -36,7 +32,7 @@ Route::get('/index', ['as' => 'index', 'uses' => 'NameController@index' ]);
 */
 
 Route::group(['middleware' => ['web']], function () {
-<<<<<<< HEAD
+
     Route::get('/', function(){
         return redirect('blank');
     });
@@ -44,7 +40,5 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/index/{rtype}', ['as' => 'index', 'uses' => 'NameController@index' ]);
     Route::get('/blank', ['as' => 'blank', 'uses' => 'NameController@blank' ]);
     Route::post('/save', ['as' => 'save', 'uses' => 'NameController@save' ]);
-=======
-    //
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
+
 });

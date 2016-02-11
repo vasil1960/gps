@@ -1,6 +1,5 @@
 
 <!--sidebar start-->
-<<<<<<< HEAD
 <!--sidebar start-->
 <aside>
     <div id="sidebar"  class="nav-collapse ">
@@ -41,7 +40,7 @@
 </aside>
 <!--sidebar end-->
 
-=======
+
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
@@ -120,4 +119,3 @@
           </div>
       </aside>
       <!--sidebar end-->
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a

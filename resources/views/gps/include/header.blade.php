@@ -5,11 +5,11 @@
             </div>
 
             <!--logo start-->
-<<<<<<< HEAD
+
             <a href="{{ URL::to('https://system.iag.bg') }}" class="logo">ИАГ <span class="lite">GPS</span></a>
-=======
+
             <a href="index.html" class="logo">ИАГ <span class="lite">GPS</span></a>
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
+
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">

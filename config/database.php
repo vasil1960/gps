@@ -54,17 +54,14 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-<<<<<<< HEAD
             'host'      => env('DB_HOST', ''),
             'database'  => env('DB_DATABASE', ''),
             'username'  => env('DB_USERNAME', ''),
             'password'  => env('DB_PASSWORD', ''),
-=======
             'host'      => env('DB_HOST', '127.0.0.1'),
             'database'  => env('DB_DATABASE', 'gps'),
             'username'  => env('DB_USERNAME', 'homestead'),
             'password'  => env('DB_PASSWORD', 'secret'),
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
