@@ -9,6 +9,12 @@
                     <span>Начало</span>
                 </a>
             </li>
+            <li class="">
+                <a class="" href="{{ URL::to('/') }}">
+                    <i class="icon_document_alt"></i>
+                    <span>Нещо си ...</span>
+                </a>
+            </li>
             <li class="sub-menu">
                 <a href="javascript:;" class="">
                     <i class="icon_document_alt"></i>
@@ -16,8 +22,21 @@
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" href="{{ URL::to('index',1) }}">Физически лица</a></li>
-                    <li><a class="" href="{{ URL::to('index',2) }}">Юридически лица</a></li>
+                    <li><a class="" href="{{ URL::to('/') }}">Списък на заявители</a></li>
+                    <li><a class="" href="{{ URL::to('index', 1) }}">Ново физ. лице</a></li>
+                    <li><a class="" href="{{ URL::to('index', 2) }}">Ново юрид. лице</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" class="">
+                    <i class="icon_document_alt"></i>
+                    <span>МПС-та</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    <li><a class="" href="{{ URL::to('/') }}">Списък на МПС-та</a></li>
+                    <li><a class="" href="{{ URL::to('/') }}">Ново МПС (ф.л.)</a></li>
+                    <li><a class="" href="{{ URL::to('/') }}">Ново МПС (ю.л.)</a></li>
                 </ul>
             </li>
             <li class="sub-menu">

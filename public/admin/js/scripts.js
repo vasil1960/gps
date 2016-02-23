@@ -86,8 +86,18 @@ function initializeJS() {
         })
     }
 
+          jQuery('#city1').autocomplete({
+              source: '/autocomplete',
+              minlength: 3,
+              autoFocus: true,
+              select: function(e, ui){
+                alert(ui.sity1);
+              }
+          }); 
 }
 
 jQuery(document).ready(function(){
     initializeJS();
 });
+
+

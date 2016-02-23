@@ -12,17 +12,32 @@ use Mockery\Exception;
 
 class NameController extends Controller
 {
+    //
     public function index($rtype)
     {
         $citys = City::orderBy('PolpulatedPlace')->get();
-        return view('gps.dashboard.index', compact('citys', 'rtype'));
+        return view('gps.dashboard.index', compact('citys','rtype'));
     }
 
+    //
+    public function autocomplete(Request $request) 
+    {
+        $term = $request->term;
+        $data = City::where('PolpulatedPlace','LIKE','%'. $term .'%')->take(10)->get();
+        $results = [];
+        foreach ($data as $key => $value) {
+            $results[] = ['id'=>$value->ID, 'oblast'=>$value->Region, 'obshtina'=>$value->Municipality, 'grad'=>$value->PolpulatedPlace];
+        }
+        return response()->json($results);
+    }
+
+    //
     public function blank()
     {
         return view('gps.dashboard.blank');
     }
 
+    //
     public function save(Request $request)
     {
         try {

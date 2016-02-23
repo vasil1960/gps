@@ -23,6 +23,8 @@
     {!!Html::style('admin/css/style.css')!!}
     {!!Html::style('admin/css/style-responsive.css')!!}
 
+    {!!Html::style('admin/css/jquery-ui-1.10.4.min.css')!!}
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -49,6 +51,7 @@
       <!-- javascripts -->
     {!!Html::script('admin/js/jquery.js')!!}
     {!!Html::script('admin/js/bootstrap.min.js')!!}
+    {!!Html::script('//code.jquery.com/ui/1.11.4/jquery-ui.js')!!}
     <!-- nice scroll -->
     {!!Html::script('admin/js/jquery.scrollTo.min.js')!!}
     {!!Html::script('admin/js/jquery.nicescroll.js')!!}

@@ -22,14 +22,18 @@
 |
 */
 
+Route::get('/', function(){
+    return redirect('blank');
+});
+
+Route::get('/index/{rtype}', ['as' => 'index',        'uses' => 'NameController@index' ]);
+Route::get('/blank',         ['as' => 'blank',        'uses' => 'NameController@blank' ]);
+Route::get('/autocomplete',  ['as' => 'autocomplete', 'uses' => 'NameController@autocomplete' ]);
+Route::post('/save',         ['as' => 'save',         'uses' => 'NameController@save'  ]);
+
+
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function(){
-        return redirect('blank');
-    });
 
-    Route::get('/index/{rtype}', ['as' => 'index', 'uses' => 'NameController@index' ]);
-    Route::get('/blank', ['as' => 'blank', 'uses' => 'NameController@blank' ]);
-    Route::post('/save', ['as' => 'save', 'uses' => 'NameController@save' ]);
 
 });
