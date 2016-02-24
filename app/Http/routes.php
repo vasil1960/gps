@@ -33,7 +33,4 @@ Route::post('/save',         ['as' => 'save',         'uses' => 'NameController@
 
 
 Route::group(['middleware' => ['web']], function () {
-
-
-
 });

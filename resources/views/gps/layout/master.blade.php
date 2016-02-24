@@ -62,9 +62,8 @@
     {!!Html::script('admin/js/form-validation-script.js')!!}
 
     {!!Html::script('admin/dist/js/select2.js')!!}
+    {!!Html::script('admin/dist/js/i18n/bg.js')!!}
     <!--custome script for all page-->
-    {!!Html::script('admin/js/scripts.js')!!}  
-
-
+    {!!Html::script('admin/js/scripts.js')!!}
   </body>
 </html>
