@@ -86,13 +86,12 @@ function initializeJS() {
         })
     }
 
-          jQuery('#city1').autocomplete({
-              source: '/autocomplete',
-              minlength: 3,
-              autoFocus: true,
-              select: function(e, ui){
-                alert(ui.sity1);
-              }
+          jQuery('#city').select2({
+              tags: "true",
+              placeholder:'Избери град',
+              minimumInputLength: 2,
+              allowClear: true,
+              language: "bg"
           }); 
 }
 

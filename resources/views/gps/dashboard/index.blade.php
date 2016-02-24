@@ -54,9 +54,10 @@
                                 <div class="form-group ">
                                   <label for="city" class="control-label col-lg-2">Град</label>
                                   <div class="col-lg-10">
-                                      <select class="form-control input-sm m-bot15" name="city" id="city">
+                                      <select class="js-example-basic-single" name="city" id="city" required="true">
+                                          <option value=""></option>
                                           @foreach($citys as $city)
-                                              <option value="{{ $city->ID }}">{{ $city->PolpulatedPlace }} ( {{ $city->Region }} )</option>
+                                              <option value="{{ $city->ID }}">{{ $city->PolpulatedPlace }}</option>
                                           @endforeach
                                       </select>
                                   </div>
@@ -65,7 +66,10 @@
                               <div class="form-group ">
                                   <label for="city1" class="control-label col-lg-2">Град <span class="required">*</span></label>
                                   <div class="col-lg-10" >
-                                      <input class="form-control" id="city1" name="city1" minlength="" type="text" required/>
+                                      <select class="js-example-basic-single">
+                                          <option value="AL">Alabama</option>
+                                          <option value="WY">Wyoming</option>
+                                      </select>
                                   </div>
                               </div>
                               <div class="form-group ">
