@@ -22,12 +22,13 @@ class NameController extends Controller
     //
     public function autocomplete(Request $request) 
     {
-        $term = $request->term;
-        $data = City::where('PolpulatedPlace','LIKE', $term .'%')->take(10)->get();
+       // $term = $request->term;
+        $data = City::where('PolpulatedPlace','LIKE', $request->term .'%')->take(10)->get();
         $results = [];
         foreach ($data as $key => $value) {
             $results[] = ['id'=>$value->ID, 'oblast'=>$value->Region, 'obshtina'=>$value->Municipality, 'grad'=>$value->PolpulatedPlace];
         }
+        //return $results;
         return response()->json($results);
     }
 

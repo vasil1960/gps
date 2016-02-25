@@ -54,25 +54,10 @@
                               <div class="form-group ">
                                   <label for="city" class="control-label col-lg-2">Населено място <span class="required">*</span></label>
                                   <div class="col-lg-10">
-                                      <select class="js-data-example-ajax" name="city" id="city" required="true">
-                                          <option value=""></option>
-                                          @foreach($citys as $city)
-                                              <option value="{{ $city->ID }}">{{ $city->PolpulatedPlace }}</option>
-                                          @endforeach
-                                      </select>
+                                      <select class="form-control" name="city" id="city" required="true"></select>
                                   </div>
                               </div>
-                              <div class="form-group ">
-                                  <label for="city1" class="control-label col-lg-2">Населено място <span class="required">*</span></label>
-                                  <div class="col-lg-10">
-                                      <select class="form-control" name="city1" id="city1" required="true">
-                                          <option value=""></option>
-                                          @foreach($citys as $city)
-                                              <option value="{{ $city->ID }}">{{ $city->PolpulatedPlace }}</option>
-                                          @endforeach
-                                      </select>
-                                  </div>
-                              </div>
+
                               <div class="form-group ">
                                   <label for="pcode" class="control-label col-lg-2">Пощенски код <span class="required">*</span></label>
                                   <div class="col-lg-10">

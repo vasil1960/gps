@@ -86,92 +86,61 @@ function initializeJS() {
         })
     }
 
-}
-    jQuery('#city').select2({
-        tags: "true",
-        placeholder:'Населено място',
-        minimumInputLength: 3,
-        allowClear: true,
-        language: "bg",
-        ajax: {
-            url: "/autocomplete",
-            dataType: 'json',
-            delay: 250,
-            data: function (params) {
-                return {
-                    term: params.term, // search term
-                    page: params.page
-                };
-            },
-            processResults: function (data, params) {
-                // parse the results into the format expected by Select2
-                // since we are using custom formatting functions we do not need to
-                // alter the remote JSON data, except to indicate that infinite
-                // scrolling can be used
-                params.page = params.page || 1;
-
-                return {
-                    results: data.items,
-                    pagination: {
-                        more: (params.page * 30) < data.total_count
-                    }
-                };
-            },
-            cache: true
-        },
-        escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-        templateResult: formatRepo, // omitted for brevity, see the source of this page
-        templateSelection: formatRepoSelection, // omitted for brevity, see the source of this page
-        results: function (data) { return { results: data, text: 'family'}; }
-        //formatResult: function(item) { return item.family; },
-        //formatSelection: function(item) { return item.family; }
-    });
-
-    function formatRepo(){
-
-    }
-
-    function formatRepoSelection(){
-
-    }
-
-    jQuery("city1").select2({
-        tags: "true",
-        minimumInputLength: 3,
-        allowClear: true,
-        language: "bg",
+    $("#city").select2({
+        tags: true,
+        multiple: false,
+        tokenSeparators: [',', ' '],
+        minimumInputLength: 2,
+        minimumResultsForSearch: 10,
         placeholder: 'Избери населено място',
+        language: "bg",
         ajax: {
-            url: "/autocomplete",
-            dataType: 'json',
-            delay: 250,
+            url: '/autocomplete',
+            dataType: "json",
+            type: "GET",
             data: function (params) {
-                return {
-                    term: params.term, // search term
-                    page: params.page
-                };
-            },
-            processResults: function (data, params) {
-                // parse the results into the format expected by Select2
-                // since we are using custom formatting functions we do not need to
-                // alter the remote JSON data, except to indicate that infinite
-                // scrolling can be used
-                params.page = params.page || 1;
 
-                return {
-                    results: data.items,
-                    pagination: {
-                        more: (params.page * 30) < data.total_count
-                    }
-                };
+                var queryParameters = {
+                    term: params.term
+                }
+                return queryParameters;
             },
-            cache: true
+            processResults: function (data) {
+                return {
+                    results: $.map(data, function (item) {
+                        return {
+                            text:     item.text,
+                            id:       item.id,
+                            oblast:   item.oblast,
+                            obshtina: item.obshtina,
+                            grad:     item.grad
+                        }
+                    })
+                };
+            }
         },
         escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-        minimumInputLength: 1,
         templateResult: formatRepo, // omitted for brevity, see the source of this page
         templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
     });
+
+    function formatRepo(repo)
+    {
+        if (!repo.id) return repo.text;
+
+        var markup = "<div class=\'select2-result-repository clearfix\'>" +
+                     "<div><h3>" + repo.grad + "</h3></div>"
+
+        return markup;
+
+    }
+
+    function formatRepoSelection(repo)
+    {
+        return "<bold>" + repo.grad + "</bold>" + ', ' + "обл. " +  repo.oblast
+    }
+}
+
 jQuery(document).ready(function(){
     initializeJS();
 });
