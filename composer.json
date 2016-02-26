@@ -7,12 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-<<<<<<< HEAD
-        "laravelcollective/html": "~5.0",
-	"rackspace/php-opencloud": "dev-master"
-=======
         "laravelcollective/html": "~5.0"
->>>>>>> d2e5093baf910f66b7bbfc051a597afebaf3557a
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

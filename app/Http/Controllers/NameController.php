@@ -15,21 +15,7 @@ class NameController extends Controller
     //
     public function index($rtype)
     {
-        $citys = City::all();
-        return view('gps.dashboard.index', compact('citys','rtype'));
-    }
-
-    //
-    public function autocomplete(Request $request) 
-    {
-       // $term = $request->term;
-        $data = City::where('PolpulatedPlace','LIKE', $request->term .'%')->take(10)->get();
-        $results = [];
-        foreach ($data as $key => $value) {
-            $results[] = ['id'=>$value->ID, 'oblast'=>$value->Region, 'obshtina'=>$value->Municipality, 'grad'=>$value->PolpulatedPlace];
-        }
-        //return $results;
-        return response()->json($results);
+        return view('gps.dashboard.index', compact('rtype'));
     }
 
     //
@@ -47,7 +33,7 @@ class NameController extends Controller
             $name->surname = $request->surname;
             $name->family = $request->family;
             $name->egn_eik = $request->egn_eik;
-            $name->rtype = 1;
+            $name->rtype = $request->rtype;
             $name->city = $request->city;
             $name->pcode = $request->pcode;
             $name->address = $request->address;

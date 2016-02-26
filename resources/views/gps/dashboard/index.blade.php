@@ -36,6 +36,14 @@
                   <div class="panel-body">
                       <div class="form">
                           <form class="form-validate form-horizontal" id="name_form" method="post" action="/save">
+
+                              @if($rtype == 1)
+                                  <input class="form-control" id="rtype" name="rtype" value="1" type="hidden" />
+                              @elseif ($rtype == 2)
+                                  <input class="form-control" id="rtype" name="rtype" value="2" type="hidden"/>
+                              @endif
+
+
                               <div class="form-group ">
                                   <label for="name" class="control-label col-lg-2">Име <span class="required">*</span></label>
                                   <div class="col-lg-10">
@@ -54,7 +62,9 @@
                               <div class="form-group ">
                                   <label for="city" class="control-label col-lg-2">Населено място <span class="required">*</span></label>
                                   <div class="col-lg-10">
-                                      <select class="form-control" name="city" id="city" required="true"></select>
+                                      <select class="form-control m-bot15" name="city" id="city"  required="true" data-width="100%" >
+                                          <option></option>
+                                      </select>
                                   </div>
                               </div>
 

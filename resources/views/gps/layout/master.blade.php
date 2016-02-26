@@ -65,5 +65,7 @@
     {!!Html::script('admin/dist/js/i18n/bg.js')!!}
     <!--custome script for all page-->
     {!!Html::script('admin/js/scripts.js')!!}
+
+    {!!Html::script('admin/js/my_scripts.js')!!}
   </body>
 </html>
