@@ -62,8 +62,8 @@
                               <div class="form-group ">
                                   <label for="city" class="control-label col-lg-2">Населено място <span class="required">*</span></label>
                                   <div class="col-lg-10">
-                                      <select class="form-control m-bot15" name="city" id="city"  required="true" data-width="100%" >
-                                          <option></option>
+                                      <select class="form-control m-bot15" name="city" id="city" required="true" data-width="100%" >
+                                        <option value=""></option>
                                       </select>
                                   </div>
                               </div>
@@ -106,8 +106,8 @@
                               </div>
                               <div class="form-group">
                                   <div class="col-lg-offset-2 col-lg-10">
-                                      <button class="btn btn-primary" type="submit">Save</button>
-                                      <button class="btn btn-default" type="button">Cancel</button>
+                                      <button class="btn btn-primary" type="submit">Запазвам</button>
+                                      <button class="btn btn-default" type="button">Отказвам</button>
                                   </div>
                               </div>
                           </form>

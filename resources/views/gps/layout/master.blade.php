@@ -25,6 +25,12 @@
 
     {!!Html::style('admin/css/jquery-ui-1.10.4.min.css')!!}
 
+
+
+      {!!Html::style('//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css')!!}
+
+
+
     {!!Html::style('admin/dist/css/select2.css')!!}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
@@ -58,11 +64,18 @@
     {!!Html::script('admin/js/jquery.nicescroll.js')!!}
     <!-- jquery validate js -->
     {!!Html::script('admin/js/jquery.validate.min.js')!!}
+
+
+
+
+
+
     <!-- custom form validation script for this page-->
     {!!Html::script('admin/js/form-validation-script.js')!!}
 
     {!!Html::script('admin/dist/js/select2.js')!!}
     {!!Html::script('admin/dist/js/i18n/bg.js')!!}
+    {!!Html::script('//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js')!!}
     <!--custome script for all page-->
     {!!Html::script('admin/js/scripts.js')!!}
 

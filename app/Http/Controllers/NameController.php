@@ -7,15 +7,23 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\City;
+use Illuminate\Support\Facades\App;
 use Mockery\Exception;
 
 class NameController extends Controller
 {
-    //
-    public function index($rtype)
+
+
+    public function show_names()
     {
-        return view('gps.dashboard.index', compact('rtype'));
+        $names = Name::all();
+        return view('gps.dashboard.names', compact('names'));
+    }
+
+    //
+    public function add_names($rtype)
+    {
+        return view('gps.dashboard.add_names', compact('rtype'));
     }
 
     //

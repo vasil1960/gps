@@ -10,6 +10,7 @@ $(document).ready(function(){
         allowClear:true,
         multiple: false,
         minimumInputLength: 1,
+        placeholder: "Избери населено място ...",
         minimumResultsForSearch: 20,
         language: "bg",
         ajax: {
@@ -26,9 +27,9 @@ $(document).ready(function(){
                     results: $.map(data, function (item) {
                         return {
                             id:       item.id,
+                            text:     item.grad,
                             oblast:   item.oblast,
-                            obshtina: item.obshtina,
-                            grad:     item.grad
+                            obshtina: item.obshtina
                         }
                     })
                 };
@@ -43,11 +44,11 @@ $(document).ready(function(){
 
     function formatRepo(repo)
     {
-        if (repo.loading) return repo.text;
+        if (!repo.id) return repo.text;
 
         var html  = ""
             html += "<div>"
-            html += "<span style='font-weight: bold; font-size: 140%'>" + repo.grad + "</span>" + "<br>"
+            html += "<span style='font-weight: bold; font-size: 120%; color: #1f3e88'>" + repo.text+ "</span>" + "<br>"
             html += "общ. "
             html += repo.obshtina
             html += ", обл. "
@@ -60,8 +61,16 @@ $(document).ready(function(){
     function formatRepoSelection(repo)
     {
         var html  = ""
-            html += repo.grad
-            html += "<span style='font-size:smaller'>" + ' - ' + 'общ. ' + repo.obshtina  + ", обл. " +  repo.oblast + "</span>"
+            html += repo.text
+            //html += "<span style='font-size:smaller'>" + ' - ' + 'общ. ' + repo.obshtina  + ", обл. " +  repo.oblast + "</span>"
         return html || repo.text
     }
+
+    $('#tblNames').DataTable({
+        select:true
+    });
+
+    $('#tblSignali').DataTable({
+        select:true
+    });
 });

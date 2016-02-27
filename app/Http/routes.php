@@ -22,14 +22,23 @@
 |
 */
 
+// get request
 Route::get('/', function(){
     return redirect('blank');
 });
 
-Route::get('/index/{rtype}',      ['as' => 'index',             'uses' => 'NameController@index' ]);
-Route::get('/blank',              ['as' => 'blank',             'uses' => 'NameController@blank' ]);
-Route::get('/city_autocomplete',  ['as' => 'city_autocomplete', 'uses' => 'AutocompleteController@city_autocomplete' ]);
-Route::post('/save',              ['as' => 'save',              'uses' => 'NameController@save'  ]);
+Route::get('/add_names/{rtype}', ['as' => 'add_names', 'uses' => 'NameController@add_names' ]);
+Route::get('/show_names', ['as' => 'show_names', 'uses' => 'NameController@show_names' ]);
+Route::get('/blank', ['as' => 'blank', 'uses' => 'NameController@blank' ]);
+Route::get('/city_autocomplete', ['as' => 'city_autocomplete', 'uses' => 'AutocompleteController@city_autocomplete' ]);
+
+// post request
+Route::post('/save', ['as' => 'save', 'uses' => 'NameController@save' ]);
+
+
+
+// 112
+Route::get('/signali', ['as' => 'signali', 'uses' => 'Signali112Controller@allSignals' ]);
 
 
 Route::group(['middleware' => ['web']], function () {

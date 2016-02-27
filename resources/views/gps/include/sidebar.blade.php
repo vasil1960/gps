@@ -22,9 +22,9 @@
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" href="{{ URL::to('/') }}">Списък на заявители</a></li>
-                    <li><a class="" href="{{ URL::to('index', 1) }}">Ново физ. лице</a></li>
-                    <li><a class="" href="{{ URL::to('index', 2) }}">Ново юрид. лице</a></li>
+                    <li><a class="" href="{{ URL::to('show_names') }}">Списък на заявители</a></li>
+                    <li><a class="" href="{{ URL::to('add_names', 1) }}">Ново физ. лице</a></li>
+                    <li><a class="" href="{{ URL::to('add_names', 2) }}">Ново юрид. лице</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
@@ -49,6 +49,16 @@
                     <li><a class="" href="#">Справка 1</a></li>
                     <li><a class="" href="#">Справка 2</a></li>
                     <li><a class="" href="#">Справка 3</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" class="">
+                    <i class="icon_document_alt"></i>
+                    <span>112</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    <li><a class="" href="{{ URL::to('/signali') }}">Сигнали</a></li>
                 </ul>
             </li>
         </ul>
