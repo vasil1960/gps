@@ -9,7 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
 use Mockery\Exception;
-
+use App\Http\Requests\CreateNameRequest;
 class NameController extends Controller
 {
 
@@ -33,29 +33,11 @@ class NameController extends Controller
     }
 
     //
-    public function save(Request $request)
+    public function save(CreateNameRequest $request, Name $names)
     {
-        try {
-            $name = new Name;
-            $name->name = $request->name;
-            $name->surname = $request->surname;
-            $name->family = $request->family;
-            $name->egn_eik = $request->egn_eik;
-            $name->rtype = $request->rtype;
-            $name->city = $request->city;
-            $name->pcode = $request->pcode;
-            $name->address = $request->address;
-            $name->phone = $request->phone;
-            $name->email = $request->email;
-            $name->description = $request->description;
-            $name->notes = $request->notes;
-            $name->insert_from = 257;
-            $name->update_from = 257;
-            $name->remember_token = $request->_token;
-            $name->save();
-            return response()->json(array('sms' => 'Данните са въведени успешно'));
-        } catch (Exception $e) {
-            return response()->json(array('err' => 'Грешно въвеждане'));
-        }
+
+        $names->create($request->all());
+
+        return redirect()->route('show_names');
     }
 }
