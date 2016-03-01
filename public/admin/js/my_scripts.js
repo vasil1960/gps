@@ -5,7 +5,7 @@
 //city_autocomplete
 
 $(document).ready(function(){
-    $("select1").select2({
+    $("select").select2({
        // tags: true,
         allowClear:true,
         multiple: false,
