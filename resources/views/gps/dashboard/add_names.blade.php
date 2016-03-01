@@ -43,7 +43,14 @@
                                   <input class="form-control" id="rtype" name="rtype" value="2" type="hidden"/>
                               @endif
 
-
+                                <!--  Form select2 -->
+                                <div class="form-group">
+                                    {!! Form::label('select1',': *',['class'=>'control-label col-lg-2']) !!}
+                                      <div class="col-lg-10">
+                                        {!! Form::select('select1[]','', null ,['class' => 'form-control', 'id' => 'select1', 'multiple']) !!}
+                                ']) !!}
+                                      </div>
+                                </div>
                               <div class="form-group {{ $errors->first('name') ? 'has-error' : '' }}">
                                   <label for="name" class="control-label col-lg-2">Име <span class="required">*</span></label>
                                   <div class="col-lg-10">
@@ -70,7 +77,6 @@
                                       </select>
                                   </div>
                               </div>
-
                               <div class="form-group {{ $errors->first('pcode') ? 'has-error' : '' }}">
                                   <label for="pcode" class="control-label col-lg-2">Пощенски код <span class="required">*</span></label>
                                   <div class="col-lg-10">

@@ -36,6 +36,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/show_names', ['as' => 'show_names', 'uses' => 'NameController@show_names' ]);
     Route::get('/blank', ['as' => 'blank', 'uses' => 'NameController@blank' ]);
     Route::get('/city_autocomplete', ['as' => 'city_autocomplete', 'uses' => 'AutocompleteController@city_autocomplete' ]);
+    Route::get('/city1_autocomplete', ['as' => 'city1_autocomplete', 'uses' => 'AutocompleteController@city1_autocomplete' ]);
 
 // post request
     Route::post('/save', ['as' => 'save', 'uses' => 'NameController@save' ]);

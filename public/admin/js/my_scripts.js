@@ -5,7 +5,7 @@
 //city_autocomplete
 
 $(document).ready(function(){
-    $("select").select2({
+    $("select1").select2({
        // tags: true,
         allowClear:true,
         multiple: false,
@@ -73,4 +73,5 @@ $(document).ready(function(){
     $('#tblSignali').DataTable({
         select:true
     });
+
 });
