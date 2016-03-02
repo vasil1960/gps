@@ -147,7 +147,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
         Collective\Html\HtmlServiceProvider::class,
+=======
+        'Collective\Html\HtmlServiceProvider',
+      
+>>>>>>> b7fb51ac44213d7ff10b63788919bd550b430d11
 
         /*
          * Application Service Providers...
@@ -156,6 +161,10 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
+=======
+
+>>>>>>> b7fb51ac44213d7ff10b63788919bd550b430d11
 
     ],
 
