@@ -16,7 +16,7 @@ class NameController extends Controller
 
     public function show_names()
     {
-        $names = Name::all();
+        $names = Name::all()->take(100)->get();
         return view('gps.dashboard.names', compact('names'));
     }
 
